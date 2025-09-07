@@ -1,0 +1,56 @@
+1. O que é Machine Learning?
+Machine Learning é técnica de ensinar um computador a aprender com dados, sem ser
+programado para cada tarefa.
+
+É como ao invés de dar uma receita detalhada de bolo(lógica de programação), ensinar
+um aprendiz a fazer bolo experimentando e ajustando a receita até dar certo. O aprendiz,
+no caso, é o algoritmo.
+
+2. Conjunto de Treinamento, Validação e Teste
+Para que o modelo aprenda e se saia bem em novas situações, os dados são divididos em
+três partes:
+
+    • Conjunto de Treinamento: É o "material de estudo" do modelo. Usamos essa
+    parte dos dados para ensinar o algoritmo a encontrar padrões e fazer previsões. É
+    aqui que ele aprende o que é o que!
+
+    • Conjunto de Validação: Seria como uma "prova intermediária". Após o modelo
+    aprender com o conjunto de treinamento, usamos os dados de validação para
+    ajustar e afinar o seu desempenho, sem que ele "decore" o conjunto de teste
+
+    • Conjunto de Teste: Este é o teste final. É a parte dos dados que o modelo nunca
+    viu durante o treinamento e a validação. O conjunto de teste para ter uma
+    estimativa final e imparcial de quão bem o nosso modelo vai se comportar no
+    mundo real.
+
+3. Como lidar com Dados Ausentes?
+Dados ausentes são um problema comum. Quando eles aparecem, temos algumas
+opções:
+
+    • Remover: Se a quantidade de dados ausentes for pequena, podemos
+    simplesmente remover as linhas (ou colunas) com valores faltantes. O risco é
+    perder informações valiosas.
+
+    • Preencher (Imputação): Esta é a abordagem mais comum. Podemos preencher os
+    valores ausentes com uma estimativa. Essa estimativa pode ser:
+        o A média, mediana ou moda da coluna (o mais simples).
+        o Uma previsão baseada em outros dados da mesma linha.
+        o Uma abordagem mais avançada, como modelos de previsão do valor ausente.
+
+4. O que é uma Matriz de Confusão?
+Uma Matriz de Confusão é uma tabela que nos ajuda a analisar o desempenho de um
+modelo de classificação. Ela nos mostra de forma clara onde o modelo está acertando e
+onde está errando. A matriz de confusão é crucial para calcular métricas como a
+acurácia, precisão e recall, que nos dão uma visão mais completa da performance do
+modelo do que apenas a acurácia geral.
+
+5. Áreas de Aplicação
+De todas as áreas, considero a Saúde uma das mais fascinantes para a aplicação de
+machine learning.
+
+    • Saúde: A capacidade de um algoritmo analisar imagens médicas (raio-x,
+    ressonância magnética) para identificar anomalias, como tumores, de forma mais
+    rápida e precisa que um olho humano, é algo revolucionário. O potencial para
+    diagnósticos precoces e a otimização de tratamentos é imenso.
+    Apesar de a agricultura e a construção civil também terem aplicações incríveis, o impacto
+    direto na vida das pessoas (na saúde) me parece a mais impressionante.
