@@ -11,7 +11,7 @@ Este espaço é o meu diário de bordo digital, criado para armazenar e organiza
 O repositório está organizado em pastas para cada módulo ou tarefa, facilitando a navegação e a consulta. Abaixo, você encontra uma breve descrição do conteúdo de cada diretório:
 
 * **`Ativ-01-Diagnostica/`**: Conceitos básicos de Machine Learning e primeiros passos.
-* **`Ativ-02-Somativa/`**: Algoritmos fundamentais em Python e análise de dados com foco em regressão.
+* **`Ativ-02-Somativa/`**: Algoritmos fundamentais em Python e análise de dados com foco em regressão..
 * **`Ativ-03-Formativa/`**: Exploração de temas gerais e aprofundamento em tópicos variados.
 * **`Ativ-04-Somativa/`**: Projeto final de classificação e segmentação de imagens usando visão computacional.
 
