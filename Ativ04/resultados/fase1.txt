@@ -1,0 +1,110 @@
+---00 Distribuição de Classes (em pixels) ---
+As 5 classes com maior quantidade de pixels:
+- nan: 136235130 pixels
+- dress: 5161424 pixels
+- coat: 5094542 pixels
+- skin: 4968057 pixels
+- pants: 3811546 pixels
+
+
+--- 1. Análise de Integridade dos Arquivos e Consistência de Formato ---
+
+Verificando integridade de 2098 imagens listadas no metadata.csv...
+✅ Sucesso: Todas as imagens listadas no metadata.csv existem e vice-versa.
+
+Formatos de imagem encontrados: Counter({'JPEG': 2098})
+✅ Sucesso: Todas as imagens estão no mesmo formato.
+
+--- 2. Análise de Consistência dos Metadados e Dimensões ---
+Verificando valores ausentes no metadata.csv...
+✅ Sucesso: Não há valores ausentes no arquivo de metadados.
+
+Verificando dimensões das imagens...
+❌ Aviso: Múltiplas dimensões de imagem encontradas. A dimensão mais comum é (550, 825).
+
+Distribuição das dimensões:
+  - (550, 809): 18 imagens
+  - (550, 815): 13 imagens
+  - (550, 842): 34 imagens
+  - (550, 836): 65 imagens
+  - (550, 828): 41 imagens
+  - (550, 820): 96 imagens
+  - (550, 816): 48 imagens
+  - (550, 817): 46 imagens
+  - (550, 838): 55 imagens
+  - (550, 840): 25 imagens
+  - (550, 866): 2 imagens
+  - (550, 805): 2 imagens
+  - (550, 825): 242 imagens
+  - (550, 831): 114 imagens
+  - (550, 827): 135 imagens
+  - (550, 819): 39 imagens
+  - (550, 846): 17 imagens
+  - (550, 822): 30 imagens
+  - (550, 853): 13 imagens
+  - (550, 823): 96 imagens
+  - (550, 826): 54 imagens
+  - (550, 814): 31 imagens
+  - (550, 813): 25 imagens
+  - (550, 821): 68 imagens
+  - (550, 833): 53 imagens
+  - (550, 829): 75 imagens
+  - (550, 818): 33 imagens
+  - (550, 839): 45 imagens
+  - (550, 810): 18 imagens
+  - (550, 849): 12 imagens
+  - (550, 830): 57 imagens
+  - (550, 832): 53 imagens
+  - (550, 811): 23 imagens
+  - (550, 834): 85 imagens
+  - (550, 869): 1 imagens
+  - (550, 845): 24 imagens
+  - (550, 855): 3 imagens
+  - (550, 812): 27 imagens
+  - (550, 848): 17 imagens
+  - (550, 824): 50 imagens
+  - (550, 841): 11 imagens
+  - (550, 847): 12 imagens
+  - (550, 835): 31 imagens
+  - (550, 874): 2 imagens
+  - (550, 807): 13 imagens
+  - (550, 843): 20 imagens
+  - (550, 877): 2 imagens
+  - (550, 837): 40 imagens
+  - (550, 862): 2 imagens
+  - (550, 863): 2 imagens
+  - (550, 856): 7 imagens
+  - (550, 852): 4 imagens
+  - (550, 865): 1 imagens
+  - (550, 786): 1 imagens
+  - (550, 806): 7 imagens
+  - (550, 851): 6 imagens
+  - (550, 850): 6 imagens
+  - (550, 860): 2 imagens
+  - (550, 844): 13 imagens
+  - (550, 861): 3 imagens
+  - (550, 787): 1 imagens
+  - (550, 854): 9 imagens
+  - (550, 868): 1 imagens
+  - (550, 871): 2 imagens
+  - (550, 872): 1 imagens
+  - (550, 864): 6 imagens
+  - (550, 857): 1 imagens
+  - (550, 859): 1 imagens
+  - (550, 867): 1 imagens
+  - (550, 804): 1 imagens
+  - (550, 808): 1 imagens
+  - (550, 803): 1 imagens
+  - (550, 801): 1 imagens
+  - (550, 873): 1 imagens
+
+  --- 3. Análise de Qualidade das Imagens ---
+Verificando imagens corrompidas...
+✅ Sucesso: Nenhuma imagem corrompida foi encontrada.
+
+--- 4. Análise de Duplicatas ---
+Verificando imagens duplicadas...
+❌ Aviso: 1 imagens duplicadas foram encontradas.
+
+Verificando metadados duplicados...
+✅ Sucesso: Não há linhas duplicadas no arquivo de metadados.
