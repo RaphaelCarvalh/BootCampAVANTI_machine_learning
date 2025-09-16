@@ -1,0 +1,115 @@
+┌───────────────────────────────┐
+│ Diretório de Imagens           │
+│ (pastas por classe)           │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ Criação do DataFrame           │
+│ Colunas: image_path, label     │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ Remoção de Duplicatas          │
+│ (por image_hash ou metadata)   │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ Divisão Train / Val / Test     │
+│ (ex: 80% / 10% / 10%)         │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ Transformações / Augmentations │
+│ - RandomResizedCrop             │
+│ - HorizontalFlip                │
+│ - Rotation                      │
+│ - Normalização                  │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ Dataset Personalizado           │
+│ (__getitem__ retorna img + label)│
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ DataLoader                     │
+│ - Batch de imagens             │
+│ - Shuffle para treino          │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ Modelo (ResNet / outro)       │
+│ - Forward pass                │
+│ - Softmax                     │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ Treinamento                    │
+│ - Loss / Backprop / Optimizer │
+│ - Scheduler (StepLR, Gamma)   │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ Validação / Teste              │
+│ - Cálculo de Loss e Accuracy   │
+│ - Confusion Matrix             │
+└───────────────┬───────────────┘
+                │
+                ▼
+┌───────────────────────────────┐
+│ Visualização e Análise         │
+│ - Gráficos de Loss/Accuracy    │
+│ - Inspeção visual das predições│
+└───────────────────────────────┘
+
+
+O hashing que implementamos até aqui não tem relação direta com segmentação; ele foi usado apenas como método de verificação de duplicatas.
+
+Explicando detalhadamente:
+
+O que fizemos:
+
+Calculamos o hash perceptual (imagehash.phash) de cada imagem.
+
+Guardamos esse hash no DataFrame (image_hash).
+
+Verificamos duplicatas comparando hashes iguais.
+
+Por que usamos:
+
+Para identificar imagens que são idênticas ou praticamente idênticas no dataset.
+
+Isso ajuda a evitar viés no treinamento e também detecta problemas de consistência no dataset.
+
+O que o hashing NÃO faz:
+
+Não segmenta as imagens.
+
+Não classifica as imagens por conteúdo.
+
+Não substitui labels coloridos ou máscaras de segmentação.
+
+Em resumo: hash = verificação de duplicatas, labels coloridos = possível base para segmentação real, e o que fizemos até agora foi exploração estatística e visual do dataset, não treino nem aplicação de modelos de segmentação.
+
+O que fizemos até agora foi uma análise exploratória e pré-processamento do dataset, incluindo:
+
+Verificação de integridade (imagens faltantes, formatos, corrompidas)
+
+Consistência dos metadados (valores ausentes, dimensões inesperadas)
+
+Distribuição de classes e duplicatas (hash e metadata)
+
+Contagem de pixels por classe usando os arquivos de labels coloridos, mas somente para análise estatística, sem gerar máscaras ou treinar algum modelo.
+
+Visualizações (histogramas, boxplots, heatmaps de dimensões, gráficos de duplicatas e top classes).
+
+Ou seja, até aqui o que chamamos de “segmentação com labels coloridos” foi apenas a contagem de pixels por classe, mas não implementamos nenhum pipeline de segmentação real (como treino de U-Net ou máscaras sobre imagens).
